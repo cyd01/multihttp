@@ -75,10 +75,12 @@ func (l *SplitListener) Accept() (net.Conn, error) {
 type Server struct {
 	http.Server
 	Addr              string
+	/*
 	ReadTimeout       time.Duration
 	ReadHeaderTimeout time.Duration
 	WriteTimeout      time.Duration
 	IdleTimeout       time.Duration
+	*/
 	MaxHeaderBytes    int
 	l                 *SplitListener
 }
